@@ -37,5 +37,25 @@ public class RegistrationRepositoryTest {
         boolean exists = repository.existsByRegistration(registration);
 
         assertThat(exists).isTrue();
+
+    }
+
+    @Test
+    @DisplayName("Should return false when doesn't exists an registration_attribute with a registration already created.")
+    public void returnFalseWhenRegistrationAttributeDoesntExists() {
+
+        String registration = "123";
+
+        boolean exists = repository.existsByRegistration(registration);
+
+        assertThat(exists).isFalse();
+
+    }
+
+    public static Registration createNewRegistration(String registration) {
+        return Registration.builder()
+                .name("vic")
+                .dateOfRegistration("15/03/2024")
+                .registration(registration).build();
     }
 }
