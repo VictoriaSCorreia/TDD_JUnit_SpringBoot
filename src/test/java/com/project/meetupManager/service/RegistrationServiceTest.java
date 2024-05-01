@@ -23,6 +23,7 @@ public class RegistrationServiceTest {
     @MockBean
     RegistrationRepository repository;
 
+
     @BeforeEach
     public void setUp() {
         this.registrationService = new RegistrationServiceImpl(repository);
@@ -53,5 +54,4 @@ public class RegistrationServiceTest {
                 .registration("001")
                 .build();
     }
-
 }

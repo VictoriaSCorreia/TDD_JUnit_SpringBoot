@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RegistrationServiceImpl implements RegistrationService {
-
     RegistrationRepository repository;
 
     public RegistrationServiceImpl(RegistrationRepository repository) {
