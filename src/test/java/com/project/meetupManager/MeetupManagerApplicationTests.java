@@ -9,5 +9,4 @@ class MeetupManagerApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

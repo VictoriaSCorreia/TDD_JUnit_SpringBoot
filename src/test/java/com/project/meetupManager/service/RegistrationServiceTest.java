@@ -23,7 +23,6 @@ public class RegistrationServiceTest {
     @MockBean
     RegistrationRepository repository;
 
-
     @BeforeEach
     public void setUp() {
         this.registrationService = new RegistrationServiceImpl(repository);
@@ -49,7 +48,7 @@ public class RegistrationServiceTest {
     private Registration createValidRegistration() {
         return Registration.builder()
                 .id(101)
-                .name("Ana Neri")
+                .name("Victoria")
                 .dateOfRegistration("25/10/2023")
                 .registration("001")
                 .build();
