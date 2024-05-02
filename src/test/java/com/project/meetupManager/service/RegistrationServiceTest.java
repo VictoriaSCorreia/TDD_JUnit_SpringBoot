@@ -34,11 +34,13 @@ public class RegistrationServiceTest {
 
         Registration registration = createValidRegistration();
 
+        // O Mockito simula comportamentos em vez de realmente acessar o banco de dados. 
         Mockito.when(repository.existsByRegistration(Mockito.anyString())).thenReturn(false);
         Mockito.when(repository.save(registration)).thenReturn(createValidRegistration());
 
         Registration savedRegistration = registrationService.save(registration);
 
+        // Testa se os dados em registration são os esperados
         assertThat(savedRegistration.getId()).isEqualTo(101);
         assertThat(savedRegistration.getName()).isEqualTo("Victoria");
         assertThat(savedRegistration.getDateOfRegistration()).isEqualTo("20/11/2023");
