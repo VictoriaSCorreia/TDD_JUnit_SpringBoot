@@ -33,10 +33,9 @@ public class RegistrationRepositoryTest {
 
         Registration registration_class_attribute = createNewRegistration(registration);
         testEntityManager.persist(registration_class_attribute);
-
         boolean exists = repository.existsByRegistration(registration);
 
-        assertThat(exists).isTrue();
+        assertThat(exists).isTrue(); // Test
 
     }
 
@@ -45,10 +44,9 @@ public class RegistrationRepositoryTest {
     public void returnFalseWhenRegistrationAttributeDoesntExists() {
 
         String registration = "123";
-
         boolean exists = repository.existsByRegistration(registration);
 
-        assertThat(exists).isFalse();
+        assertThat(exists).isFalse(); // Test
 
     }
 
