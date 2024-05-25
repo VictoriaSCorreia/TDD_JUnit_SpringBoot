@@ -11,7 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/registration")
+@CrossOrigin(origins = "*", maxAge = 3600)
+@RequestMapping("/registration")
 public class RegistrationController {
 
     private RegistrationService registrationService;
@@ -30,7 +31,6 @@ public class RegistrationController {
 
         Registration entity = modelMapper.map(dto, Registration.class);
         entity = registrationService.save(entity);
-
         return modelMapper.map(entity, RegistrationDTO.class);
     }
 }

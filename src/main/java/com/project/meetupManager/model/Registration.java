@@ -33,4 +33,5 @@ public class Registration {
     @OneToMany(mappedBy = "registration")
     private List<Meetup> meetups;
 
+
 }
