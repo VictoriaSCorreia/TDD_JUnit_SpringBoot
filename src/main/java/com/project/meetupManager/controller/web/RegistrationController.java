@@ -19,7 +19,6 @@ public class RegistrationController {
 
     private ModelMapper modelMapper;
 
-
     public RegistrationController(RegistrationService registrationService, ModelMapper modelMapper) {
         this.registrationService = registrationService;
         this.modelMapper = modelMapper;
