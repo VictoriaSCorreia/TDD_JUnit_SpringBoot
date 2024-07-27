@@ -16,6 +16,7 @@ public class ApiErrors {
         bindingResult.getAllErrors()
                 .forEach(error -> this.errors.add(error.getDefaultMessage()));
     }
+    
     public ApiErrors(BusinessException e) {
         this.errors = Arrays.asList(e.getMessage());
     }
