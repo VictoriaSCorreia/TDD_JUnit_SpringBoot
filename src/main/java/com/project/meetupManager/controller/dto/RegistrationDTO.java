@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class RegistrationDTO {
-
     private Integer id;
 
     @NotEmpty
