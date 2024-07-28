@@ -15,7 +15,6 @@ import java.util.List;
 @Entity
 @Table
 public class Registration {
-
     @Id
     @Column(name = "registration_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +31,5 @@ public class Registration {
 
     @OneToMany(mappedBy = "registration")
     private List<Meetup> meetups;
-
 
 }
