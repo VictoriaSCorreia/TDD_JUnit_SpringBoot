@@ -25,7 +25,6 @@ public class RegistrationController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public RegistrationDTO create(@RequestBody @Valid RegistrationDTO dto) {
-
         Registration entity = modelMapper.map(dto, Registration.class);
         entity = registrationService.save(entity);
         return modelMapper.map(entity, RegistrationDTO.class);
