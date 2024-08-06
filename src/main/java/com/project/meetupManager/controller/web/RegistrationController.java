@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/registration")
 public class RegistrationController {
-
     private RegistrationService registrationService;
-
     private ModelMapper modelMapper;
 
     public RegistrationController(RegistrationService registrationService, ModelMapper modelMapper) {
