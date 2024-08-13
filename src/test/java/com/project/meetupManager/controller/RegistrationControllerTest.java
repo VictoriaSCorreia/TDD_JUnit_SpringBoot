@@ -47,9 +47,7 @@ public class RegistrationControllerTest {
         Registration savedRegistration = Registration.builder().id(101)
                 .name("Bruno Henrique").dateOfRegistration("15/09/2021").registration("001").build();
 
-        // execucao
-        BDDMockito.given(registrationService.save(any(Registration.class))).willReturn(savedRegistration);
-
+        // execucao BDDMockito.given(registrationService.save(any(Registration.class))).willReturn(savedRegistration);
         String json  = new ObjectMapper().writeValueAsString(registrationDTOBuilder);
 
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders
