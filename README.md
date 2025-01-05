@@ -4,6 +4,6 @@
 
 ## 💻 Projeto
 
-Utilizando o Spring e o Java 11 para aplicar o fluxo de Desenvolvimento Orientado a Testes (TDD) em um serviço, testes unitários a testes de integração, com o JUnit 5.
+Utilizando Spring e Java 11 para aplicação do fluxo de Desenvolvimento Orientado a Testes (TDD) em um serviço (testes unitários a testes de integração) com JUnit 5.
 
 ---
